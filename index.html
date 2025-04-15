@@ -7,23 +7,40 @@
     <title>Liz Bowen: Personal Website</title>
 </head>
 <body>
+    <!-- encrypt email -- I hope this works... -->
+    <script> 
+        document.addEventListener("DOMContentLoaded", function () {
+            const encodedEmail = "ZWxpemFiZXRoYm93MjBAZ21haWwuY29t";
+            const email = atob(encodedEmail);
+            const emailElement = document.getElementById("email");
+            emailElement.textContent = email;
+            emailElement.href = "mailto:" + email;
+        });
+    </script>
+
     <h1 class="header">Liz Bowen's Personal Website</h1>
     <div class="main">
         <img src="/images/me.jpg" alt="Liz Bowen">
-        <div class="minibar">
-            <ul class="sidebar"> 
-                <li class="button"><a href="/pages/resume.html">Resume</a></li>
-                <li class="button"><a href="https://github.com/egbowen">Github</a></li>
-                <li class="button">Projects</li>
-            </ul>
-            <div class="contact">
-                <h2>Contact:</h2>
-                <p> email@email.email</p>
-                <p>LinkedIn: <a href="www.linkedin.com/in/elizabeth-gs-bowen">bowen-elizabeth</a></p>
-            </div>
+        <ul class="sidebar"> 
+            <li class="button"><a href="/pages/resume.html">Resume</a></li>
+            <li class="button"><a href="https://github.com/egbowen">Github</a></li>
+            <li class="button">Projects</li>
+        </ul>
+    </div>
+    <div class="minibar">
+        <div class="info contact">
+            <h2 class="header">Contact</h2>
+            <p>Email: <a id="email" href="#"></a></p>
+            <p>LinkedIn: <a href="www.linkedin.com/in/bowen-elizabeth">bowen-elizabeth</a></p>
+        </div>
+        <div class="info">
+            <h2 class="header"> Bio</h2>
+            <p>I graduated from Middlebury College in February 2025 with a degree in Computer Science and Italian. My Italian Senior work, a translation of five chapters of the 20th century novel Il Quartiere, won the Italian Department Magione Memorial Award for Excellence in Italian Studies.</p>
+            <p>In fall of 2024, I was the Event Planner for Middlebury’s Women and Nonbinary in Computer Science Club (WiCS+) and ran networking and community building events to facilitate connections within Midd CS. I also played frisbee and was on the DIII Women's College Championship team in 2022 (Go Pranksters!). </p>
+            <p>In my free time, I love to hike, play frisbee and volleyball, and walk around new places. My favorite books have come from recommendations from friends, so please feel free to send any my way. Favorite books currently include: Pachinko by Min Jin Lee, Cloud Atlas by David Mitchell, and Dune by Frank Herbert. </p>
+            <p>I started this website in April of 2022, inspired by the personal website of my friend Tim Hua. Check him out <a href="https://timhua.me/">here!</a></p>
         </div>
     </div>
-    <div class="bio"> Insert Bio</div>
 
     
 </body>
